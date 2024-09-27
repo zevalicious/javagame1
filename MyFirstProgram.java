@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
 public class MyFirstProgram{
-
+    static Scanner scan = new Scanner(System.in);
     public static String path(){
 return "s";
     }
     public static int turn(String r, String x,String l, String xl, int healthloss, int lhealthloss, int health){
-        Scanner scan = new Scanner(System.in);
+        
         String b = scan.nextLine();
-        scan.close();
         
     
         if (b.equals((r))) //make this the correct answer
@@ -105,20 +104,20 @@ else {
     
 
 }
-if (health ==89 || health == 99 ){
-
+if (health ==90 || health == 100 ){
+    health = turn("continue", 
+     " You arrive in a strange feild with a house with a hole in your boot."+ 
+    "type (investigate) to investigate the house. "+
+        "type (continue) to continue on your hero's journey!!",
+      "sticktinue", 
+        "You and the stick arrive in a strange feild with a house. type (investigate) to investigate the house.\n" + 
+        " type (continue) to continue on your hero's journey!!",0,20, health);
 }
-else{
-    health = turn("continue",  """
-        You have arrived at the swamp, 
-        do you want to stay and explore(type stay) or attempt to escape(type escape)?
-        """,
- "sticktinue", 
- "oh shut up ur dead",0,20, health);
 
 
-}
+        scan.close();
 
     }
+    
 }
 //bleh xd bleh xd 
