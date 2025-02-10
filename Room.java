@@ -9,21 +9,32 @@ public class Room {
 
 
     }
+    public void setRoomResult(String directionString, int health, int misery){
+
+
+
+    }
+    public void setpuzzleText(String puzzleText){
+
+
+    }
+
+
     public boolean canMove(int direction){
-       // if (direction == 1) && (canMoveLeft ==false){ 
+       if ((direction == 1) && (canMoveLeft ==false)){ 
        //&& bropken
 
 
-       // }
-        else if (direction == 2){
+        }
+        else if ((direction == 2) && (canMoveRight ==false)){
 
         }
 
-        else if (direction == 3){
+        else if ((direction == 3) && (canMoveUp ==false)){
 
         }
 
-        else if (direction == 4){
+        else if ((direction == 4) && (canMoveDown ==false)){
 
         }
 
