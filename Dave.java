@@ -27,6 +27,12 @@ public class Dave {
         return health;
         
     }
+    //room move method. if room.canMove = true,
+    //if right
+    //roomNum++ 
+    //or up roomNum += 100;
+    //left/down are same but negative
+    
 
     public static void main(String[] args) {
         //inverntory arrayList system. 
