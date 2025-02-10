@@ -1,21 +1,24 @@
 import java.util.ArrayList;
 
 public class Dave {
-    int health;
-    public int die(){ //method, thing that the class can do
-    System.out.println("");
-     return 0;
+    int health = 10;
+    public boolean aliveCheck(){ //method, thing that the class can do
+        if (health == 0){
+            return false;
+
+        }
+     return true;
     }
     public int heal(){ //method, thing that the class can do
         health ++;
        return health;
     }
-    public int fight(){ //method, thing that the class can do
+    public int fight(){ //fight method
         double y = Math.random();
         if (y >= 0.5)
         {
         health --;
-        System.out.println("");
+        System.out.println("lose");
         }
         else {
         System.out.println("");
@@ -26,6 +29,8 @@ public class Dave {
     }
 
     public static void main(String[] args) {
+        //inverntory arrayList system. 
+        //
                 ArrayList<Integer> myList = new ArrayList<Integer>();
         myList.add(50);
         myList.add(30);
