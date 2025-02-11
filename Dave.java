@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Dave {
+    //instantialize a room
     int health = 10;
     public boolean aliveCheck(){ //method, thing that the class can do
         if (health == 0){
@@ -9,8 +10,8 @@ public class Dave {
         }
      return true;
     }
-    public int heal(){ //method, thing that the class can do
-        health ++;
+    public int heal(int x){ //method, thing that the class can do
+        health += x;
        return health;
     }
     public int fight(){ //fight method
@@ -26,6 +27,14 @@ public class Dave {
         }
         return health;
         
+    }
+    public void currentRoom(){
+
+
+    }
+    public void move(){
+
+
     }
     //room move method. if room.canMove = true,
     //if right
