@@ -2,9 +2,15 @@ import java.util.ArrayList;
 
 public class Dave {
     //instantialize a room
+    public int roomNum;
+    ArrayList<Room> roomsList = new ArrayList<Room>();
+    int[] roomNumArray = { 1, 100, 2, 200, 3, 300, 4, 400, 5 , 500 };    
+    int roomCount = 0;
+    int roomIndex = 0;
+
     int health = 10;
     public boolean aliveCheck(){ //method, thing that the class can do
-        if (health == 0){
+        if (health <= 0){
             return false;
 
         }
@@ -19,10 +25,8 @@ public class Dave {
         if (y >= 0.5)
         {
         health --;
-        System.out.println("lose");
         }
         else {
-        System.out.println("");
 
         }
         return health;
@@ -32,8 +36,25 @@ public class Dave {
 
 
     }
-    public void move(){
+    //asks which way user wants to move, this moves. 
+    //loop through array list until roomNum to get its index, index is the same as index of room in room arrayList
 
+    public Room move(Room eRoom, String choice){
+        if ((eRoom.canMoveDown)&&(choice.equals("down"))){
+            roomNum = (roomNum - 100);
+
+
+
+        }   
+        if ((eRoom.canMoveLeft)&&(choice.equals("left"))){
+        roomNum--;}
+        for (int e:roomNumArray){
+            if (e == roomNum){
+                roomIndex = roomCount;
+            }
+            roomCount++;
+        }
+        return roomsList.get(roomIndex);
 
     }
     //room move method. if room.canMove = true,

@@ -10,17 +10,22 @@ public class PuzzleChoice {
 
     public void setChoiceResult(String directionString, int healthChange, int miseryChange, Dave playerDave){
        //in main do if statements after choice to change dave.health value.
-        playerDave.heal(healthChange);
-        //playerDave.misery(miseryChange);
+       //remember to set all 
+        //same thing as health just used for whichEnding
 
         //playerDave.move(directionString);
 
 
        
     }
-     public String setPuzzleText(String puzzleText3){
+    public void getChoiceResult(){
+        //getDave initialized in mainGame.heal(healthChange);
+        //playerDave.misery(miseryChange);
+        //remember to get all
+
+    }
+     public void setPuzzleText(String puzzleText3){
         puzzleText = puzzleText3;
-         return puzzleText;
     }
 
     
