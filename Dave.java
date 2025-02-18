@@ -2,13 +2,19 @@ import java.util.ArrayList;
 
 public class Dave {
     //instantialize a room
-    public int roomNum;
+    public int playerRoomNum;
+    public int misery;
     ArrayList<Room> roomsList = new ArrayList<Room>();
-    int[] roomNumArray = { 1, 100, 2, 200, 3, 300, 4, 400, 5 , 500 };    
-    int roomCount = 0;
-    int roomIndex = 0;
+    public int roomCount = 0;
+    public int roomIndex = 0;
+    public int[] roomNumArray = { 1, 100, 2, 200, 3, 300, 4, 400, 5 , 500 };    
+
 
     int health = 10;
+    public int getRoomIndex(){
+
+        return roomIndex;
+    }
     public boolean aliveCheck(){ //method, thing that the class can do
         if (health <= 0){
             return false;
@@ -16,9 +22,18 @@ public class Dave {
         }
      return true;
     }
-    public int heal(int x){ //method, thing that the class can do
+    public void heal(int x){ //method, thing that the class can do
         health += x;
-       return health;
+    }
+    public void misery(int x){ //method, thing that the class can do
+        misery += x;
+    }
+    public int getHealth(){
+
+        return health;
+    }
+    public int getMisery(){
+        return misery;
     }
     public int fight(){ //fight method
         double y = Math.random();
@@ -41,15 +56,27 @@ public class Dave {
 
     public Room move(Room eRoom, String choice){
         if ((eRoom.canMoveDown)&&(choice.equals("down"))){
-            roomNum = (roomNum - 100);
+            playerRoomNum = (playerRoomNum - 100);
 
 
 
         }   
+        //ADD UP AND RIGHT
         if ((eRoom.canMoveLeft)&&(choice.equals("left"))){
-        roomNum--;}
+        playerRoomNum--;}
+        if ((eRoom.canMoveUp)&&(choice.equals("up"))){
+            playerRoomNum = (playerRoomNum + 100);
+
+
+
+        }   
+        //ADD UP AND RIGHT
+        if ((eRoom.canMoveRight)&&(choice.equals("right"))){
+            playerRoomNum++;}
+
+
         for (int e:roomNumArray){
-            if (e == roomNum){
+            if (e == playerRoomNum){
                 roomIndex = roomCount;
             }
             roomCount++;

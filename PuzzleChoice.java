@@ -3,16 +3,26 @@ public class PuzzleChoice {
     
     public String puzzleText;
     public String directionResult;
-    public String healthResult;
-    public String miseryResult;
+    public String rightAnswer;
 
+    public void setRightAnswer(String rightAnswerImput){
 
+        rightAnswer = rightAnswerImput;
+    }
+    public boolean checkRightAnswer(String answer){
 
+        if (rightAnswer == answer){
+
+            return true;
+        }
+        return false;
+    }
     public void setChoiceResult(String directionString, int healthChange, int miseryChange, Dave playerDave){
        //in main do if statements after choice to change dave.health value.
        //remember to set all 
         //same thing as health just used for whichEnding
-
+            directionResult = directionString;
+        playerDave.heal(healthChange);
         //playerDave.move(directionString);
 
 
