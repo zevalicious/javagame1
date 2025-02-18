@@ -53,7 +53,12 @@ public class Dave {
     }
     //asks which way user wants to move, this moves. 
     //loop through array list until roomNum to get its index, index is the same as index of room in room arrayList
-
+/**
+ * 
+ * @param eRoom -put the room based on current room index,getRoomIndex.
+ * @param choice - string of players choice
+ * @return - returns the room after running even if unchanged, will return the same room as before so remember to check if room has stayed the same. 
+ */
     public Room move(Room eRoom, String choice){
         if ((eRoom.canMoveDown)&&(choice.equals("down"))){
             playerRoomNum = (playerRoomNum - 100);
