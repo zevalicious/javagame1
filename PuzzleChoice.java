@@ -34,7 +34,7 @@ public class PuzzleChoice {
         //remember to get all
 
     }
-     public void setPuzzleText(String puzzleText3){
+    public void setPuzzleText(String puzzleText3){
         puzzleText = puzzleText3;
     }
 

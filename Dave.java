@@ -13,7 +13,7 @@ public class Dave {
     int health = 10;
     public int getRoomIndex(){
 
-        return roomIndex;
+        return playerRoomNum;
     }
     public boolean aliveCheck(){ //method, thing that the class can do
         if (health <= 0){
