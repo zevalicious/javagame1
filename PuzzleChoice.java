@@ -9,14 +9,12 @@ public class PuzzleChoice {
 
         rightAnswer = rightAnswerImput;
     }
-    public boolean checkRightAnswer(String answer){
+    public String getRightAnswer(String answer){
 
-        if (rightAnswer == answer){
-
-            return true;
+        
+            return rightAnswer;
         }
-        return false;
-    }
+    
     public void setChoiceResult(String directionString, int healthChange, int miseryChange, Dave playerDave){
        //in main do if statements after choice to change dave.health value.
        //remember to set all 

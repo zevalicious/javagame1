@@ -8,6 +8,9 @@ public int[] roomNumArray = { 1, 100, 2, 200, 3, 300, 4, 400, 5 , 500 };
 
 public static void main(String[] args) {
  ArrayList<Room> roomsList = new ArrayList<Room>();
+ ArrayList<PuzzleChoice>  puzzlesList
+ = new ArrayList<PuzzleChoice>();
+
 
 
 Scanner scanner = new Scanner(System.in);
@@ -25,6 +28,8 @@ puzzle1.setChoiceResult("n",2,2,playerDave);
 room1.setRoomMoves(true,true,true,true);
 
 roomsList.add(room1);
+puzzlesList.add(puzzle1);
+
 
 Room room2 = new Room(); 
 
@@ -128,12 +133,13 @@ while (!gameOver) {
     int turns = 0;
     boolean playerAnswer = false;
     Room currentRoom = roomsList.get(playerDave.getRoomIndex());
+    PuzzleChoice currentPuzzle =puzzlesList.get(playerDave.getRoomIndex());
     while (!playerAnswer){
 
 
 
 
-        if ((scanner.nextLine().equals())){
+        if ((scanner.nextLine().equals(currentPuzzle.getRightAnswer()))){
             playerAnswer = true;
         }
     }
