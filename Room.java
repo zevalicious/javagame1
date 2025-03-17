@@ -7,6 +7,7 @@ public class Room {
     public boolean canMoveUp;
     public boolean canMoveDown;
     public ArrayList<PuzzleChoice> puzzleChoices = new ArrayList<PuzzleChoice>();
+    
     public void setRoomMoves(boolean left, boolean right, boolean up, boolean down){
         if (left == true){
             canMoveLeft = true;

@@ -1,13 +1,18 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MainGame {
 public boolean canGo;
 public boolean right;
 public int[] roomNumArray = { 1, 100, 2, 200, 3, 300, 4, 400, 5 , 500 };   
-public static void main(String[] args) {
 
-    
-    Dave playerDave = new Dave();
+public static void main(String[] args) {
+ ArrayList<Room> roomsList = new ArrayList<Room>();
+
+
+Scanner scanner = new Scanner(System.in);
+
+Dave playerDave = new Dave();
 
 
 Room room1 = new Room();
@@ -19,6 +24,8 @@ puzzle1.setChoiceResult("n",2,2,playerDave);
 
 room1.setRoomMoves(true,true,true,true);
 
+roomsList.add(room1);
+
 Room room2 = new Room(); 
 
 PuzzleChoice puzzle2 = new PuzzleChoice();
@@ -26,6 +33,9 @@ puzzle2.setRightAnswer("2");
 puzzle2.setPuzzleText("s");
 puzzle2.setChoiceResult("n",2,2,playerDave);
 room2.setRoomMoves(true,true,true,true);
+
+roomsList.add(room2);
+
 
 Room room3 = new Room(); 
 
@@ -35,6 +45,8 @@ puzzle3.setPuzzleText("s");
 puzzle3.setChoiceResult("n",2,2,playerDave);
 room3.setRoomMoves(true,true,true,true);
 
+roomsList.add(room3);
+
 Room room4 = new Room(); 
 
 PuzzleChoice puzzle4 = new PuzzleChoice();
@@ -43,6 +55,9 @@ puzzle4.setPuzzleText("s");
 puzzle4.setChoiceResult("n",2,2,playerDave);
 room4.setRoomMoves(true,true,true,true);
 
+roomsList.add(room4);
+
+
 Room room5 = new Room(); 
 
 PuzzleChoice puzzle5 = new PuzzleChoice();
@@ -50,6 +65,9 @@ puzzle5.setRightAnswer("2");
 puzzle5.setPuzzleText("s");
 puzzle5.setChoiceResult("n",2,2,playerDave);
 room5.setRoomMoves(true,true,true,true);
+
+roomsList.add(room5);
+
 
 Room room100 = new Room();
 
@@ -107,7 +125,18 @@ room500.setRoomMoves(true,true,true,true);
     //While (!gameOver){
     boolean gameOver=false;
 while (!gameOver) {
+    int turns = 0;
+    boolean playerAnswer = false;
+    Room currentRoom = roomsList.get(playerDave.getRoomIndex());
+    while (!playerAnswer){
 
+
+
+
+        if ((scanner.nextLine().equals())){
+            playerAnswer = true;
+        }
+    }
 
 
 
@@ -115,6 +144,7 @@ while (!gameOver) {
     if (turns>=10){
     gameOver =true;
     }
+    turns++;
 }
 
 
@@ -123,8 +153,7 @@ while (!gameOver) {
 
 }
     
-    // text saying how many turns you have left
-    //turnsLeftInt --
+
     //get puzzletext/print
     //while player ==wrong
     //ask player for answer

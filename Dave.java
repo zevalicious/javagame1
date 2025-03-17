@@ -4,7 +4,7 @@ public class Dave {
     //instantialize a room
     public int playerRoomNum;
     public int misery;
-    ArrayList<Room> roomsList = new ArrayList<Room>();
+    
     public int roomCount = 0;
     public int roomIndex = 0;
     public int[] roomNumArray = { 1, 100, 2, 200, 3, 300, 4, 400, 5 , 500 };    
@@ -47,10 +47,7 @@ public class Dave {
         return health;
         
     }
-    public void currentRoom(){
 
-
-    }
     //asks which way user wants to move, this moves. 
     //loop through array list until roomNum to get its index, index is the same as index of room in room arrayList
 /**
@@ -59,7 +56,7 @@ public class Dave {
  * @param choice - string of players choice
  * @return - returns the room after running even if unchanged, will return the same room as before so remember to check if room has stayed the same. 
  */
-    public Room move(Room eRoom, String choice){
+    public int move(Room eRoom, String choice){
         if ((eRoom.canMoveDown)&&(choice.equals("down"))){
             playerRoomNum = (playerRoomNum - 100);
 
@@ -86,9 +83,10 @@ public class Dave {
             }
             roomCount++;
         }
-        return roomsList.get(roomIndex);
+        return roomIndex;
 
     }
+    // FIX THIS METHOD
     //room move method. if room.canMove = true,
     //if right
     //roomNum++ 
