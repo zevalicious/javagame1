@@ -9,7 +9,7 @@ public class PuzzleChoice {
 
         rightAnswer = rightAnswerImput;
     }
-    public String getRightAnswer(String answer){
+    public String getRightAnswer(){
 
         
             return rightAnswer;
