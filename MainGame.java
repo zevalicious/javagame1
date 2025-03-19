@@ -134,8 +134,9 @@ while (!gameOver) {
     boolean playerAnswer = false;
     Room currentRoom = roomsList.get(playerDave.getRoomIndex());
     PuzzleChoice currentPuzzle =puzzlesList.get(playerDave.getRoomIndex());
+    
     while (!playerAnswer){
-
+        System.out.println(currentPuzzle.getText());
 
 
 
