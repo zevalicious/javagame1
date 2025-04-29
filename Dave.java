@@ -6,13 +6,16 @@ public class Dave {
     
     public int roomCount = 0;
     public int roomIndex = 0;
-    public int[] roomNumArray = { 1, 100, 2, 200, 3, 300, 4, 400, 5 , 500 };    
+    public int[] roomNumArray = { 1, 2, 3, 4, 5, 100, 200, 300, 400 , 500 };    
 
 
     int health = 10;
     public int getRoomIndex(){
-
-        return playerRoomNum;
+        int placementInt = playerRoomNum;
+        if (playerRoomNum>10){
+            placementInt = (5+ (playerRoomNum/100));
+        }
+        return placementInt;
     }
     public boolean aliveCheck(){ //method, thing that the class can do
         if (health <= 0){

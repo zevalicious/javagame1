@@ -149,14 +149,17 @@ puzzlesList.add(puzzle500);
    
 
 
+PuzzleChoice currentPuzzle =puzzlesList.get(playerDave.getRoomIndex());
 
+Room currentRoom = roomsList.get(playerDave.getRoomIndex());
+boolean playerAnswer = false;
+int turns = 0;
 
     boolean gameOver=false;
 while (!gameOver) {
-    int turns = 0;
-    boolean playerAnswer = false;
-    Room currentRoom = roomsList.get(playerDave.getRoomIndex());
-    PuzzleChoice currentPuzzle =puzzlesList.get(playerDave.getRoomIndex());
+     playerAnswer = false;
+     currentRoom = roomsList.get(playerDave.getRoomIndex());
+     currentPuzzle =puzzlesList.get(playerDave.getRoomIndex());
     //add explanation of how to play
     
     while (!playerAnswer){
