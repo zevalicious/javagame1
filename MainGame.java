@@ -40,6 +40,7 @@ puzzle2.setChoiceResult("n",2,2,playerDave);
 room2.setRoomMoves(true,true,true,true);
 
 roomsList.add(room2);
+puzzlesList.add(puzzle2);
 
 
 Room room3 = new Room(); 
@@ -49,8 +50,9 @@ puzzle3.setRightAnswer("2");
 puzzle3.setPuzzleText("s");
 puzzle3.setChoiceResult("n",2,2,playerDave);
 room3.setRoomMoves(true,true,true,true);
+puzzlesList.add(puzzle3);
 
-roomsList.add(room3);
+
 
 Room room4 = new Room(); 
 
@@ -60,7 +62,6 @@ puzzle4.setPuzzleText("s");
 puzzle4.setChoiceResult("n",2,2,playerDave);
 room4.setRoomMoves(true,true,true,true);
 
-roomsList.add(room4);
 
 
 Room room5 = new Room(); 
@@ -71,7 +72,7 @@ puzzle5.setPuzzleText("s");
 puzzle5.setChoiceResult("n",2,2,playerDave);
 room5.setRoomMoves(true,true,true,true);
 
-roomsList.add(room5);
+
 
 
 Room room100 = new Room();
@@ -116,24 +117,47 @@ room500.setRoomMoves(true,true,true,true);
 
 
 
+roomsList.add(room3);
+puzzlesList.add(puzzle3);
+
+roomsList.add(room4);
+puzzlesList.add(puzzle4);
+
+roomsList.add(room5);
+puzzlesList.add(puzzle5);
+
+roomsList.add(room100);
+puzzlesList.add(puzzle100);
+
+roomsList.add(room200);
+puzzlesList.add(puzzle200);
+
+roomsList.add(room300);
+puzzlesList.add(puzzle300);
+
+roomsList.add(room400);
+puzzlesList.add(puzzle400);
+
+roomsList.add(room500);
+puzzlesList.add(puzzle500);
 
 
 
-    //initialize all the rooms
-    //initialize all the puzzles
-    //MAKE SURE THE PUZZLE HAS SAME INDEX AS ROOM
+
+
+  
+   
 
 
 
-    //the game
-    //int turnsLeft. 
-    //While (!gameOver){
+
     boolean gameOver=false;
 while (!gameOver) {
     int turns = 0;
     boolean playerAnswer = false;
     Room currentRoom = roomsList.get(playerDave.getRoomIndex());
     PuzzleChoice currentPuzzle =puzzlesList.get(playerDave.getRoomIndex());
+    //add explanation of how to play
     
     while (!playerAnswer){
         System.out.println(currentPuzzle.getText());
@@ -143,32 +167,36 @@ while (!gameOver) {
         if ((scanner.nextLine().equals(currentPuzzle.getRightAnswer()))){
             playerAnswer = true;
         }
+        else{
+            System.err.println("falsefalsefalsefalsefalse! please eneter a new answer");
+        }
     }
+    currentPuzzle.getChoiceResult(playerDave);
+    System.out.println("its time to move yo ! you know your choices alr... 'left, up, down, right'....   also if your choice is invalid you stay put!!");
+  
+        playerDave.move(currentRoom, scanner.nextLine());
 
-
-
-
-    if (turns>=10){
-    gameOver =true;
-    }
-    turns++;
-}
-
-
-}
-
-
-}
     
 
-    //get puzzletext/print
-    //while player ==wrong
-    //ask player for answer
-    //puzzle.getChoiceResult
-    //while player == cantGo
-    //ask where player wants to go
-    //check room.canMove
-    //dave.move()
+
+
+
+    if (turns>20){
+    gameOver =true;
+    System.out.println("game is so over boron, 2 slow !");
+    }
+    turns++;
+
+}
+
+
+}
+
+}
+    //please close scanner
+
+    //check if dave is alive before checking rounds over
+
     //check if room.end is true to end loop once game ends
     //loops back around
     //

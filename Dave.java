@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class Dave {
     //instantialize a room
@@ -56,34 +55,35 @@ public class Dave {
  * @param choice - string of players choice
  * @return - returns the room after running even if unchanged, will return the same room as before so remember to check if room has stayed the same. 
  */
-    public int move(Room eRoom, String choice){
+    public void move(Room eRoom, String choice){
         if ((eRoom.canMoveDown)&&(choice.equals("down"))){
             playerRoomNum = (playerRoomNum - 100);
 
 
 
         }   
-        //ADD UP AND RIGHT
+       
         if ((eRoom.canMoveLeft)&&(choice.equals("left"))){
         playerRoomNum--;}
+
         if ((eRoom.canMoveUp)&&(choice.equals("up"))){
             playerRoomNum = (playerRoomNum + 100);
 
 
 
         }   
-        //ADD UP AND RIGHT
+        
         if ((eRoom.canMoveRight)&&(choice.equals("right"))){
             playerRoomNum++;}
 
-
+//???? what the heck is this past zev?? 
         for (int e:roomNumArray){
             if (e == playerRoomNum){
                 roomIndex = roomCount;
             }
             roomCount++;
         }
-        return roomIndex;
+        
 
     }
     // FIX THIS METHOD
@@ -94,18 +94,4 @@ public class Dave {
     //left/down are same but negative
     
 
-    public static void main(String[] args) {
-        //inverntory arrayList system. 
-        //
-                ArrayList<Integer> myList = new ArrayList<Integer>();
-        myList.add(50);
-        myList.add(30);
-        myList.add(20);
-        int total = 0;
-        for (Integer value : myList)
-        {
-            total += value;
-        }
-        System.out.println("Sum of all elements: " + total);
-}
 }

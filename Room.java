@@ -6,7 +6,6 @@ public class Room {
     public boolean canMoveRight;
     public boolean canMoveUp;
     public boolean canMoveDown;
-    public ArrayList<PuzzleChoice> puzzleChoices = new ArrayList<PuzzleChoice>();
     
     public void setRoomMoves(boolean left, boolean right, boolean up, boolean down){
         if (left == true){
@@ -36,10 +35,7 @@ public class Room {
 
     }
    // public void setRoomResult(String directionString, int health, int misery){
-    public void addPuzzleChoices(PuzzleChoice puzzleChoice3){
-        puzzleChoices.add(puzzleChoice3);//might mess up
 
-    }
 
 //archived/moved to PuzzleChoice
    // }
